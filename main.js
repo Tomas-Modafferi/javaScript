@@ -1,18 +1,17 @@
-
 const monedas = {
     USD: 1.0,
     EUR: 1.11,
     REALES: 4.75,
     URU: 38.0,
-    ARG: 543.0,
+    ARG: 754.0,
 }; 
 let arr = [];
-  
+
 function convertirMoneda(moneda1, monto) {
 let resultado = 0;
   
 if (moneda1 === "EUR") {
-     resultado = monto / monedas.EUR;
+    resultado = monto / monedas.EUR;
     alert(`${resultado}` + " dolares.");
     } else if (moneda1 === "REALES") {
       resultado = monto / monedas.REALES;;
@@ -38,7 +37,7 @@ while (continuar) {
     alert("Moneda no válida.");
     continue;
     }
-  
+    
     let monto = parseInt(prompt("Ingrese el monto a convertir"));
     let resultado = convertirMoneda(moneda1, monto);
     arr.push(resultado);
@@ -48,14 +47,13 @@ while (continuar) {
     continuar = false;
     }
   }
-  
-  let suma = 0;
-  
-  for (let index of arr) {
-    suma += index;
-  }
-  
-  alert("El monto total de dolares convertidos es de " + `${suma}` + " dolares")
-  
-  
+respuesta.toUpperCase() === "NO" && (continuar = false);
+    
+function sumar(...arr){
+  arr.reduce((total, valor) => total + valor, 0);
+}
+let suma = sumar(...arr);
+alert("El monto total de dolares convertidos es de " + suma + " dolares");
+
+
 
