@@ -3,12 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Conversor</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <h1>Simulador de conversion de dolares a "x" moneda</h1>
-    <h2>Ingrese la moneda a realizar y al terminar la operacion, si desea realizar otra, ingrese "SI"</h2>
-
+    <ul>
+        <li>Ingrese la moneda a realizar y al terminar la operacion, si desea realizar otra, ingrese "SI", caso contrario, inregese "NO".</li>
+    </ul>
+    <div id="botonesMoneda">
+    </div>
+    <div id="formulario">
+        <label for="moneda">Moneda a convertir:</label>
+        <select id="moneda">
+            <option value="EUR">EUR</option>
+            <option value="REALES">REALES</option>
+            <option value="URU">URU</option>
+            <option value="ARG">ARG</option>
+        </select>
+        <br>
+        <label for="monto">Monto a convertir:</label>
+        <input type="number" id="monto">
+        <br>
+        <button id="convertir">Convertir</button>
+        <br>
+        <button id="historial">Ver historial de conversiones</button>
+    </div>
+    <div id="resultado"></div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./main.js"></script>
 </body>
 </html>

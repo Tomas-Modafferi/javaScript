@@ -1,0 +1,8 @@
+.color{
+    background-color: grey;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
